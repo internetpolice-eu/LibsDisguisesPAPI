@@ -49,6 +49,6 @@ public final class LibsDisguisesPAPI extends PlaceholderExpansion {
                 }
                 return "";
         }
-        return "";
+        return null;
     }
 }
