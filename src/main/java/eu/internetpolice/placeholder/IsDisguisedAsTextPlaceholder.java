@@ -13,17 +13,21 @@ public class IsDisguisedAsTextPlaceholder implements Placeholder {
     }
 
     @Override
-    public String getIdentifier() {
+    public String getName() {
         return "is_disguised_as_text";
     }
 
     @Override
     public String getUsage() {
-        return String.format("%%%s_%s%%", expansion.getIdentifier(), getIdentifier());
+        return String.format("%%%s_%s%%", expansion.getIdentifier(), getName());
     }
 
     @Override
     public String getValue(Player player, String[] args) {
+        if (player == null) {
+            return null;
+        }
+
         if (!DisguiseAPI.isDisguised(player)) {
             return expansion.getFalseAsText();
         } else {

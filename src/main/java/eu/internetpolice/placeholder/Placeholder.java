@@ -5,21 +5,21 @@ import org.bukkit.entity.Player;
 public interface Placeholder {
 
     /**
-     * Placeholder identifier
-     * @return String with the placeholder identifier (%plugin_identifier_arg_arg%)
+     * Placeholder name
+     * @return String with the placeholder name (%plugin_name:arg_arg%)
      */
-    String getIdentifier();
+    String getName();
 
     /**
      * How to use this placeholder
-     * @return String with full placeholder for info command
+     * @return String with full placeholder for getPlaceholders()
      */
     String getUsage();
 
     /**
      * Placeholder value
      * @param player the player looking at the placeholder
-     * @param args the extra arguments in a placeholder (%plugin_identifier_arg_arg%)
+     * @param args the extra arguments in a placeholder (%plugin_name:arg_arg%)
      * @return String value for this placeholder
      */
     String getValue(Player player, String[] args);

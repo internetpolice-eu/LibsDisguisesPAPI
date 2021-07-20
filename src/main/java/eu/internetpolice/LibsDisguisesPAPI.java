@@ -3,7 +3,6 @@ package eu.internetpolice;
 import eu.internetpolice.placeholder.DisguisedAsPlaceholder;
 import eu.internetpolice.placeholder.IsDisguisedPlaceholder;
 import eu.internetpolice.placeholder.IsDisguisedAsTextPlaceholder;
-import eu.internetpolice.placeholder.Placeholder;
 import eu.internetpolice.placeholder.PlaceholderManager;
 import me.clip.placeholderapi.expansion.Configurable;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
@@ -11,11 +10,9 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 public final class LibsDisguisesPAPI extends PlaceholderExpansion implements Configurable {
 
@@ -48,7 +45,7 @@ public final class LibsDisguisesPAPI extends PlaceholderExpansion implements Con
 
     @Override
     public @NotNull String getAuthor() {
-        return "internetpolice.eu";
+        return "Sheepert_";
     }
 
     @Override
@@ -72,21 +69,8 @@ public final class LibsDisguisesPAPI extends PlaceholderExpansion implements Con
     }
 
     @Override
-    public String onPlaceholderRequest(Player player, @NotNull String identifier) {
-        if (player == null) {
-            return null;
-        }
-
-        Optional<Placeholder> placeholder = placeholderManager.getPlaceholder(identifier);
-
-        if (placeholder.isEmpty()) {
-            return null;
-        }
-
-        String[] splitIdentifier = identifier.split("_");
-        String[] args = Arrays.copyOfRange(splitIdentifier, 1, splitIdentifier.length);
-
-        return placeholder.get().getValue(player, args);
+    public String onPlaceholderRequest(Player player, @NotNull String params) {
+        return placeholderManager.onRequest(player, params);
     }
 
     @Override
