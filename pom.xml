@@ -6,7 +6,7 @@
 
     <groupId>eu.internetpolice</groupId>
     <artifactId>LibsDisguisesPAPI</artifactId>
-    <version>1.2.0</version>
+    <version>1.3.0</version>
     <packaging>jar</packaging>
     <name>LibsDisguisesPAPI</name>
 
@@ -91,7 +91,7 @@
         <dependency>
             <groupId>LibsDisguises</groupId>
             <artifactId>LibsDisguises</artifactId>
-            <version>10.0.24</version>
+            <version>10.0.26</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

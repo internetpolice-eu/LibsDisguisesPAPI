@@ -9,6 +9,7 @@ Adds placeholders for the plugin [Lib's Disguises](https://www.spigotmc.org/reso
 
 ### Placeholders:
 `%libsdisguises_disguised_as%` - Displays the name of the entity the player is disguised as.  
+`%libsdisguises_disguised_as:type%` - Displays the [type](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html) of the entity the player is disguised as.  
 `%libsdisguises_is_disguised_as_text%` - Displays if the player is disguised as text ("Disguised"/"Not Disguised").  
 `%libsdisguises_is_disguised%` - Displays if the player is disguised (true/false).  
 
@@ -19,3 +20,6 @@ libsdisguises:
   not-disguised-value: none
   true-as-text: Disguised
 ```
+
+### Example
+![Lib's disguises PlaceholderAPI placeholders example with FeatherBoard](https://www.cdejong.com/uploads/libsdisguises-placeholderapi-placeholders-example.png)

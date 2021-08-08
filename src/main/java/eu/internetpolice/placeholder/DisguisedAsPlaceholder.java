@@ -28,10 +28,24 @@ public class DisguisedAsPlaceholder implements Placeholder {
             return null;
         }
 
+        if (args.length == 1 && args[0].equalsIgnoreCase("type")) {
+            return getEntityType(player);
+        }
+
+        return getEntityName(player);
+    }
+
+    private String getEntityName(Player player) {
         if (!DisguiseAPI.isDisguised(player)) {
             return expansion.getNotDisguisedValue();
-        } else {
-            return DisguiseAPI.getDisguise(player).getDisguiseName();
         }
+        return DisguiseAPI.getDisguise(player).getDisguiseName();
+    }
+
+    private String getEntityType(Player player) {
+        if (!DisguiseAPI.isDisguised(player)) {
+            return "";
+        }
+        return DisguiseAPI.getDisguise(player).getType().toString();
     }
 }
