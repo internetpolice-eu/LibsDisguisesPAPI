@@ -19,7 +19,7 @@ public class DisguisedAsPlaceholder implements Placeholder {
 
     @Override
     public String getUsage() {
-        return String.format("%%%s_%s%%", expansion.getIdentifier(), getName());
+        return String.format("%%%s_%s[:type]%%", expansion.getIdentifier(), getName());
     }
 
     @Override

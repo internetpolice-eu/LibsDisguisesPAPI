@@ -21,5 +21,5 @@ libsdisguises:
   true-as-text: Disguised
 ```
 
-### Example
+### Example:
 ![Lib's disguises PlaceholderAPI placeholders example with FeatherBoard](https://www.cdejong.com/uploads/libsdisguises-placeholderapi-placeholders-example.png)
